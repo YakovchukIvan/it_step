@@ -24,7 +24,7 @@ btn.addEventListener("click", addLetters = () => {
         let interest = letters[d] / input_length * 100;
         
         ul.insertAdjacentHTML("beforeend", 
-        `<li>"${d}": ${letters[d]} - ${interest.toFixed(3)} %</li>`
+        `<li><mark>${d}</mark>: ${letters[d]} - ${interest.toFixed(3)} %</li>`
         )
     }
 

@@ -36,6 +36,7 @@ input {
     border-radius: 8px;
     font-size: 18px;
     padding: 5px 10px;
+    color: azure;
 }
 
 button {
@@ -47,14 +48,24 @@ button {
     color: azure;
 }
 
-ul {
+ol {
     /* list-style-type: none; */
-    /* columns:2; */
+    /* border: 2px solid red; */
+    columns:4;
     font-size: larger;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 li {
-    /* background-color: rgb(63, 117, 99); */
-    margin: 10px;
-    padding: 5px;
+    width: 250px;
+    background-color: rgb(63, 117, 99);
+    border-radius: 8px;
+    margin: 10px 10px;
+    padding: 8px 16px;
+}
+
+mark {
+    padding: 0 5px;
 }
