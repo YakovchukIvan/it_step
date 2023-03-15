@@ -27,7 +27,23 @@ btn.addEventListener("click", addLetters = () => {
         `<li>"${d}": ${letters[d]} - ${interest.toFixed(3)} %</li>`
         )
     }
+
+
+    input.value = ""
+
 })
+
+window.addEventListener("keypress", (e) => {
+    // console.log(e);
+    if (e.keyCode === 13) {
+        addLetters()
+        console.log(e);
+    }
+})
+
+
+
+
 
 
 
