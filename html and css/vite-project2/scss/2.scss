@@ -1,0 +1,70 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-auto-rows: minmax(100px, auto);
+
+    // вирівнювання по осі - х
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: start;
+    justify-content: end;
+    justify-content: left;
+    justify-content: right;
+    justify-content: flex-end;
+    justify-content: space-evenly;
+
+    // вирівнювання по осі - у
+    align-content: center;
+    align-content: space-between;
+    align-content: space-evenly;
+    align-content: space-around;
+
+    // вирівнювання по осі У відносно комірок
+    align-items: start;
+    align-items: center;
+    align-items: stretch;
+    align-items: flex-end;
+
+    // вирівнювання по осі Х відносно комірок
+    justify-items: start;
+    justify-items: center;
+    justify-items: end;
+    justify-items: stretch;
+    justify-items: left;
+    justify-items: right;
+}
+
+.item {
+    border: 1px solid #fff;
+    min-height: 50px;
+    min-width: 50px;
+    color: purple;
+}
+
+.item_1 {}
+
+.item_2 {}
+
+.item_3 {
+    background-color: yellowgreen;
+    // вирівнювання дочірних комірок
+    align-self: center;
+    align-self: end;
+    align-self: start;
+    // У
+    justify-self: start;
+    justify-self: center;
+    justify-self: end;
+
+}
+
+.item_4 {}
+
+.item_5 {}
+
+.item_6 {}
+
+.item_7 {}
+
+.item_8 {}

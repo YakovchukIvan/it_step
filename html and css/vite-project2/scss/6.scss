@@ -1,0 +1,47 @@
+.container {
+    color: black;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "sidebar sidebar"
+    "main main"
+    "footer footer";
+    gap: 10px;
+    grid-template-columns: 150px 1fr;
+    @media screen and (min-width: 768px) {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "sidebar main"
+            "footer footer"
+            ;
+    }
+}
+
+header {
+    grid-area: header;
+    height: 80px;
+    background-color: aquamarine;
+}
+nav {
+    grid-area: nav;
+    height: 40px;
+    background-color: rgb(255, 238, 127);
+}
+section {
+    grid-area: sidebar;
+    height: calc(100vh - 80px);
+    background-color: #bb2923;
+}
+main {
+    grid-area: main;
+    height: calc(100vh - 80px);
+    background-color: tomato;
+}
+
+footer {
+    grid-area: footer;
+    height: 80px;
+    background-color: aquamarine;
+}

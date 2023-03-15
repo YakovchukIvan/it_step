@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  color: azure;
+}
+.wrapper {
+  overflow: hidden;
+  min-width: 100vh;
+  /* position: relative; */
+}
+.span {
+}
+.block {
+  width: 20%;
+  float: left;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+/* повторення анімації */
+  /* animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-name: animations;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0s; */
+  animation: animations 5s linear 0s 1 normal forwards;
+
+
+
+  position: absolute;
+}
+
+.block:nth-child(even){
+  bottom: 0px;
+}
+.block:nth-child(odd){
+}
+
+
+@keyframes animations {
+  from{
+    height: 0vh;
+  }
+  to{
+    height: 100vh;
+  }
+}
+
+
+
+
+.block-1 {
+  background-image: url(./img/img1.jpg);
+}
+.block-2 {
+  background-image: url(./img/img2.jpg);
+  left: 20%;
+}
+.block-3 {
+  background-image: url(./img/img3.jpg);
+  left: 40%;
+}
+.block-4 {
+  background-image: url(./img/img4.jpg);
+  left: 60%;
+}
+.block-5 {
+  background-image: url(./img/img5.jpg);
+  left: 80%;
+}

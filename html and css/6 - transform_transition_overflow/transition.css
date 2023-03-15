@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.example {
+    width: 400px;
+    height: 400px;
+    background-color: blueviolet;
+    border: 2px solid black;
+    cursor: pointer;
+    /* період переходу */
+    transition-duration: 500ms;
+    /* правило до якого застосовуємо transition */
+    /* transition-property: transform; */
+    transition-property: transform, widht;
+    /* transition-property: all; */
+    /* затримка до переходу */
+    transition-delay: 500ms, 3s;
+    transition-timing-function: cubic-bezier(0.65, 0.2, 1, -0.73);
+}
+.example:hover{
+    background: #1ea8a1;
+    transform: (-50%, 0);
+    width: 150px;
+}

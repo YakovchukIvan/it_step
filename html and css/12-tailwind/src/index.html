@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" class="dark" id="html">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Tailwind CSS</title>
+</head>
+
+<body class="bg-gradient-to-r from-cyan-500 to-blue-500 dark:to-blue-700">
+    <header class="bg-blue-600 dark:bg-blue-900 h-[72px] grid place-items-center p-2">
+        <nav class="flex justify-between w-full items-center select-none">
+            <ul class="flex gap-x-3 text-blue-900 dark:text-white">
+                <li class="cursor-pointer hover:underline decoration-pink-500">
+                    Home
+                </li>
+                <li class="cursor-pointer hover:underline decoration-pink-500">
+                    About
+                </li>
+                <li class="cursor-pointer hover:underline decoration-pink-500">
+                    Contacts
+                </li>
+                <li class="cursor-pointer hover:underline decoration-pink-500">
+                    Pricing
+                </li>
+            </ul>
+            <div class="flex gap-2">
+                <div class="border-2 border-blue-900 dark:border-blue-600 rounded-full p-2" id="btn-theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6 cursor-pointer active:scale-95 stroke-blue-900 dark:stroke-blue-600 fill-blue-900 dark:fill-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                    </svg>
+                </div>
+                <div class="relative">
+                    <img src="https://randomuser.me/api/portraits/women/88.jpg" alt="portraits"
+                        class="w-10 h-10 rounded-full" />
+                    <div class="bg-green-500 w-2 h-2 rounded-full absolute right-1 bottom-1"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container grid place-items-center">
+        <div class="calculator w-[360px] bg-[#B3D8FF] dark:bg-[#D4F7E8]">
+            <div class="px-[27px] h-[233px] pt-[32px] pb-[40px] flex flex-col justify-between">
+                <div class="flex justify-between">
+                    <h2 class="uppercase font-bold text-[#6EB6FF] dark:text-[#92ECC5]">
+                        Calci
+                    </h2>
+                    <div class="flex flex-col">
+                        <span class="bg-[#6EB6FF] dark:bg-[#92ECC5] w-2 h-2 rounded-full bottom-1"></span>
+                        <span class="bg-[#6EB6FF] dark:bg-[#92ECC5] w-2 h-2 rounded-full bottom-1"></span>
+                        <span class="bg-[#6EB6FF] dark:bg-[#92ECC5] w-2 h-2 rounded-full bottom-1"></span>
+                    </div>
+                </div>
+                <div class="px-[27px]">
+                    <input type="text" name="" id="" value="9462"
+                        class="bg-transparent focus:outline-none text-6xl text-[#6EB6FF] dark:text-[#92ECC5] text-end w-full" />
+                </div>
+            </div>
+
+            <div class="h-[450px] bg-[#6eb6ff] dark:bg-[#92ECC5]
+            grid">
+                <ul class="text-white grid grid-cols-4 place-items-center 
+                text-2xl">
+                    <li>C</li>
+                    <li>%</li>
+                    <li>/</li>
+                    <li>x</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li>-</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>+</li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li class="row-span-2">=</li>
+                    <li>0</li>
+                    <li>.</li>
+                    <li>del</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.querySelector("#btn-theme").addEventListener("click", () => {
+            document.getElementById("html").classList.toggle("dark");
+        });
+    </script>
+</body>
+
+</html>

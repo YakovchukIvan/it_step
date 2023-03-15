@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <!-- <h1>display: flex <mark>flex-direction: row</mark></h1>
+         <div class="flex-container flex-container-1">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>display: flex <mark>flex-direction: column</mark></h1>
+        <div class="flex-container flex-container-2">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>display: flex <mark>flex-direction: row-reverse</mark></h1>
+        <div class="flex-container flex-container-3">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex-direction: column-reverse</h1>
+        <div class="flex-container flex-container-4">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>display: flex <mark>flex-wrap; nowrap;</mark></h1>
+        <div class="flex-container flex-container-5">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex-wrap: wrap-reverse;</h1>
+        <div class="flex-container flex-container-6">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex-flow: row wrap</h1>
+        <div class="flex-container flex-container-7">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>justify-content: <mark>center;</mark></h1>
+        <div class="flex-container flex-container-8">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>justify-content: <mark>flex-end</mark></h1>
+        <div class="flex-container flex-container-9">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+            
+        </div>
+        <h1>justify-content: <mark>space-between;</mark></h1>
+        <div class="flex-container flex-container-10">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+            
+        </div>
+        <h1>justify-content: <mark>space-around;</mark></h1>
+        <div class="flex-container flex-container-11">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+            
+        </div>
+        <h1>justify-content: <mark>space-evenly;</mark></h1>
+        <div class="flex-container flex-container-12">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>justify-content: <mark>right</mark></h1>
+        <div class="flex-container flex-container-13">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>align-items: <mark>center;</mark></h1>
+        <div class="flex-container flex-container-14">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>gap <mark> 0px 15px;</mark></h1>
+        <div class="flex-container flex-container-15">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+            <div class="flex-item flex-item-3"><span>4</span></div>
+            <div class="flex-item flex-item-3"><span>5</span></div>
+            <div class="flex-item flex-item-3"><span>6</span></div>
+            <div class="flex-item flex-item-3"><span>7</span></div>
+            <div class="flex-item flex-item-3"><span>8</span></div>
+        </div> 
+
+        <h1>Order: <mark>order:0;</mark></h1>
+        <div class="flex-container flex-container-16">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex-grow: <mark></mark></h1>
+        <div class="flex-container flex-container-17">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex-shrink: <mark></mark></h1>
+        <div class="flex-container flex-container-18">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex-basis: <mark></mark></h1>
+        <div class="flex-container flex-container-19">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+        <h1>flex: 0 0 auto;<mark>flex: grow | flex-shrink | flex-basis</mark></h1>
+        <div class="flex-container flex-container-20">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div> -->
+        <h1>align-self: <mark></mark></h1>
+        <div class="flex-container flex-container-21">
+            <div class="flex-item flex-item-1"><span>1</span></div>
+            <div class="flex-item flex-item-2"><span>2</span></div>
+            <div class="flex-item flex-item-3"><span>3</span></div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

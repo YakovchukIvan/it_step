@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+
+:root {
+    --black: #212121;
+    --light-grey: #B5B5C3;
+    --gray: #464E5F;
+    --btn-blue:#3699FF;
+    --btn-pink: #F64E60;
+    --btn-green: #C9F7F5;
+    --btn-green-text: #1BC5BD;
+    --nude: #F3F6F9;
+}
+
+.wrapper {
+height: 100vh;
+display: grid;
+place-items: center;
+}
+.table-wrapper {
+    padding: 29px;
+    min-width: 1180px;
+    overflow: auto;
+}
+
+.caption {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.text_caption {
+}
+.text_caption>h3{
+    font-size: 18px;
+    color: var(--black);
+    margin: 0;
+    margin-bottom: 7px;
+}
+.text_caption>p{
+    font-size: 12px;
+    margin: 0;
+    color: var(--light-grey);
+}
+
+.btn_wrapper_caption {
+}
+.btn {
+    border-radius: 6px;
+    border: none;
+    padding: 8px 19px;
+    font-weight: 600;
+    height: 34px;
+}
+.btn-blue {
+    background-color: var(--btn-blue);
+    margin-right: 10px;
+    color: #fff;
+}
+.btn-pink {
+    background-color: var(--btn-pink);
+    color: #fff;
+}
+
+.img_wrapper {
+    background-color: var(--nude);
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.img_wrapper > img {
+    height: 40px;
+}
+.text_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.text_wrapper img {
+    height: 17px;
+}
+
+.text_bold {
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 8px;
+}
+.text_light {
+    margin: 0;
+    color: var(--light-grey);
+}
+.btn-green {
+    width: 92px;
+    font-size: 12px;
+    background-color: var(--btn-green);
+    color: var(--btn-green-text);
+    font-weight: 600;
+    padding: 0;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+thead > tr > th {
+    background-color: var(--nude);
+    padding: 13px 20px;
+    color: var(--light-grey);
+    text-align: left;
+    padding-left: 0;
+}
+
+thead > tr > th:nth-child(1){
+    color: var(--gray);;
+}
+
+tbody > tr > td:nth-child(1){
+    display: flex;
+    align-items: center;
+}
+
+tbody > tr > td {
+    padding: 30px;
+    padding-left: 0;
+}
+
+table,
+tr,
+td,
+th {
+    /* border: 1px solid black; */
+}
+
+tbody > tr >td:last-child {
+    text-align: center;
+}

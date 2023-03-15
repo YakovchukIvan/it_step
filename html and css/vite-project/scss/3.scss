@@ -1,0 +1,37 @@
+ul {
+    list-style-type: none;
+}
+
+header {
+    height: 70px;
+    background-color: cadetblue;
+    display: grid;
+    place-items: center;
+}
+
+div {
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    @media screen and (min-width: 768px) {
+        grid-template-columns: 200px 1fr;
+    }
+}
+main {
+    background-color: firebrick;
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    min-height: calc(100vh - 140px);
+}
+nav {
+    background-color: palevioletred;
+}
+footer {
+    background-color: cadetblue;
+    height: 70px;
+    ul {
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(4, 100px);
+    }
+}

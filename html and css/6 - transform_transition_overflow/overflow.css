@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+}
+div {
+    width: 400px;
+    border: 1px solid salmon;
+    height: 200px;
+    display: inline-block;
+}
+div:nth-child(1){
+    background-color: blueviolet;
+    overflow: auto;
+}
+div:nth-child(2){
+    background-color: rgb(24, 137, 145);
+    overflow: hidden;
+}
+div:nth-child(3){
+    background-color: rgb(17, 187, 59);
+    /* overflow: scroll; */
+    /* overflow-y: scroll; */
+    /* overflow-x: scroll; */
+}

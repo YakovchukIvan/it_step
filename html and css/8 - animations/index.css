@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.example{
+    background-color: fuchsia;
+    width: 300px;
+    height: 300px;
+    border-radius: 45px;
+    border: 2px solid purple;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+
+.animation-class {
+    animation-name: my-animation;
+    /* час анімації */
+    animation-duration: 2s; /* 5s */
+    /* infinite - безкінечно */
+    animation-iteration-count: infinite;
+    /* к-ть повторів анімації */
+    animation-iteration-count: 2;
+    /* порядок анімації  */
+    animation-direction: alternate;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+  }
+  .animation-class:hover {
+    animation-play-state: running;
+    animation-play-state: paused;
+  }
+  
+  @keyframes my-animation {
+    0% {
+      background-color: black;
+    }
+    20% {
+      transform: scale(0.5);
+    }
+    50% {
+      border: 10px solid purple;
+    }
+    100% {
+      background-color: salmon;
+      transform: translate(-50%, -50%);
+    }
+  }
+

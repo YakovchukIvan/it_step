@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(81, 0, 75);
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+}
+
+.wrapper {
+    height: 100vh;
+    
+}
+.parent-element {
+    background-color: rgb(194, 48, 170);
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+.block {
+    height: 67px;
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+
+}
+img {
+    left: 0;
+
+    position: absolute;
+    width: 130px;
+    height: 130px;
+}
+
+.block_1 {
+    background-color: rgb(44, 138, 138);
+    /* visibility: hidden;
+    display: none; */
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.block_2 {
+    background-color: rgb(0, 47, 255);
+
+}
+.block_3 {
+    background-color: rgb(0, 255, 55);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+}
+.block_4 {
+    background-color: rgb(255, 196, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+}
+.block_5 {
+    background-color: rgb(255, 72, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.block_6 {
+    background-color: rgb(255, 0, 98);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+
+}

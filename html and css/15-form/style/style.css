@@ -1,0 +1,67 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 20px 0 20px 20px;
+    background-color: rgb(60,60,60);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    color: rgb(218, 208, 208);
+}
+
+/* input[type="checkbox"] {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+
+.checkbox {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(/img/chekbox.svg);
+    cursor: pointer;
+}
+
+.checkbox:hover {
+    background-image: url(/img/chekbox3.svg);
+}
+
+input[type="checkbox"]:checked+.checkbox {
+    background-image: url(/img/chekbox2.svg);
+} */
+
+input.apple-switch {
+    appearance: none;
+
+    position: relative;
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+input.apple-switch:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: rgb(255, 255, 255);
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px rgba(55, 55, 55, 0.649);
+}
+input.apple-switch:checked {
+    background-color: rgb(21, 179, 60);
+}
+input.apple-switch:checked::after {
+    left: 20px;
+}
