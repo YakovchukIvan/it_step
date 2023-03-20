@@ -5,6 +5,12 @@ let btn = document.querySelector(".btn");
 btn.addEventListener("click", addLetters = () => {
     let letters = {};
 
+    const listItems = document.querySelectorAll("li")
+    if (listItems.length > 0) {
+        listItems.forEach(item => item.remove());
+    }
+
+
     for (let i = 0; i < input.value.length; i++) {
         const letter = input.value[i]
         if (letters[letter]) {
