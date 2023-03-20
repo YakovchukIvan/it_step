@@ -1,5 +1,6 @@
 class Dog  {
 
+    static weight = 10;
     constructor(name, breed, age) {
         this.name = name
         this.breed = breed
@@ -7,6 +8,7 @@ class Dog  {
     }
 
     ShowDogInfo(){
+
         console.log(` Name: ${this.name}\n Breed: ${this.breed}\n Age: ${this.age}`);
     }
 
@@ -16,8 +18,10 @@ let Bob = new Dog("Bob", "Taxa", 3)
 let Jack = new Dog("Jack", "Sheperd", 6)
 // console.log('Bob: ', Bob);
 
-// Bob.ShowDogInfo()
-// Jack.ShowDogInfo()
+Bob.ShowDogInfo()
+Jack.ShowDogInfo()
+console.log(Dog.weight);
+
 
 class HunterDog extends Dog{
 

@@ -21,4 +21,4 @@ let user = new Person("Jack", "18");
 user.addHobby("food");
 user.addHobby("game");
 user.addHobby("work");
-user.getHobbies("Jack", 18)
+user.getHobbies("Jack", 18);
