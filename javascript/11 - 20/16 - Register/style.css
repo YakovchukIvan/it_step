@@ -12,7 +12,7 @@ html {
 body {
     margin: 0;
     padding: 40px;
-    background-color: rgba(41, 41, 41, 0.918);
+    /* background-color: rgba(41, 41, 41, 0.918); */
     font-family: "Roboto", sans-serif;
     /* font-size: 1.2rem; */
     min-height: 100vh;
@@ -25,6 +25,8 @@ body {
 
 
 #registrationForm {
+    /* background-color: #ccc; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     max-width: 500px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -35,11 +37,14 @@ body {
 .form-group {
     position: relative;
     margin-bottom: 10px;
+    
 }
 
 label {
     display: block;
+    font-size: 18px;
     margin-bottom: 5px;
+    color: rgb(50, 129, 134);
 }
 
 input[name="firstName"],
@@ -52,36 +57,79 @@ input[name="confirm_password"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #5a71da;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
 }
+
+input[name="date"] {
+    color: rgb(50, 129, 134);
+}
+
+input:focus {
+    border: 2px solid #ccc !important;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
+    outline: none;
+}
+
+
 
 button[type="submit"] {
     display: block;
-    background-color: rgb(83, 182, 91);
+    background-color: rgb(38, 125, 224);
     color: #ebe2e2;
     font-size: 16px;
-    padding: 10px;
-    margin-top: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    padding: 10px;
+    margin-top: 30px;
 }
+
 button[type="submit"]:hover {
     color: #fff;
 }
+
 button[type="submit"]:active {
     transform: scale(0.98);
-    /* color: #fff; */
+    opacity: 0.8;
 }
 
-.validationOne {
-    /* position: absolute; */
-    background-color: aquamarine;
-    border: 1px solid red;
+p {
+    background-color: rgb(177, 34, 34);
+    border: 3px solid rgb(179, 85, 69);
     border-radius: 5px;
-    /* bottom: -25px;
-    left: 10px; */
-    color: red;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(253, 253, 253);
     padding: 2px 4px;
-    opacity: 0.8;
+    animation: zoom 2s ease-in-out infinite;
+}
+
+.item7 > p {
+    background-color: rgb(94, 165, 98);
+    border: none;
+    color: rgb(23, 65, 40);
+    width: max-content;
+    animation:none;
+    opacity: 1;
+    padding: 4px 8px;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
