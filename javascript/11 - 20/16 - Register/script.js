@@ -10,11 +10,19 @@ class User {
 
     register(){
         console.log(this);
+        
+        localStorage.setItem(this.email, JSON.stringify(this));
+        alert("Успішна реєстрація")
+
+
     }
 
 }
 
+
 const registrationForm = document.getElementById('registrationForm');
+const loginForm = document.getElementById('loginForm');
+
 
 const item1 = document.querySelector(".item1") // створюємо item1 в JS документі і присвоюємо йому значення тега <div class="item1"></div> з HTML документа
 const item2 = document.querySelector(".item2") // це для того, щоб ми могли працювати з елементом div.item1 з самого HTML документа в документі JS
@@ -32,7 +40,6 @@ const input5 = document.querySelector(".password")
 const input6 = document.querySelector(".confirm_password")
 
 
-
 registrationForm.addEventListener('submit', (event) => {
     event.preventDefault()
 
@@ -45,13 +52,13 @@ registrationForm.addEventListener('submit', (event) => {
 
     const user = new User (firstName, lastName, date, email, password, confirm_password);
 
-    const validInput1 = document.querySelectorAll(".validation1") // створюємо validInput1 в JS документі і присвоюємо йому значення тега <p class="validation1"></p> з HTML документа
-    const validInput2 = document.querySelectorAll(".validation2") 
-    const validInput3 = document.querySelectorAll(".validation3")
-    const validInput4 = document.querySelectorAll(".validation4")
-    const validInput5 = document.querySelectorAll(".validation5")
-    const validInput6 = document.querySelectorAll(".validation6")
-    const validInput7 = document.querySelectorAll(".validation7")
+    const validInput1 = document.querySelectorAll("validation1") // створюємо validInput1 в JS документі і присвоюємо йому значення тега <p class="validation1"></p> з HTML документа
+    const validInput2 = document.querySelectorAll("validation2") 
+    const validInput3 = document.querySelectorAll("validation3")
+    const validInput4 = document.querySelectorAll("validation4")
+    const validInput5 = document.querySelectorAll("validation5")
+    const validInput6 = document.querySelectorAll("validation6")
+    const validInput7 = document.querySelectorAll("validation7")
 
     if (firstName.length < 1 ||  lastName.length < 1 || date.length < 1 || email.length < 1 || password.length < 6 || confirm_password.length < 6) {
         console.log("Заповніть всі данні");
@@ -149,3 +156,45 @@ registrationForm.addEventListener('submit', (event) => {
     }
 
 })
+
+
+const registerBtn = document.getElementById("registerBtn")
+
+registerBtn.addEventListener("click", ShowRegister = () => {
+    loginForm.style.display = "none"
+    registrationForm.style.display = "block"
+})
+
+loginForm.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    const logInEmail = document.getElementById("loginEmail").value
+    const logInPassword = document.getElementById("loginPassword").value
+
+    const userData = localStorage.getItem(logInEmail)
+    // console.log('userData: ', userData);
+
+    if (userData) {
+       const user = JSON.parse(userData)
+    //    console.log("Такої пошти не існує");
+       if (user.password === logInPassword) {
+        console.log("Вхід успішний");
+       } else {
+        console.log("Не вірний пароль");
+       }
+    } else {
+        console.log("Не вірна пошта");
+    }
+
+})
+
+const goToLoginBtn = document.getElementById("goToLoginBtn");
+
+goToLoginBtn.addEventListener("click", ShowLogin = () => {
+    loginForm.style.display = "block"
+    registrationForm.style.display = "none"
+})
+
+
+
+

@@ -24,20 +24,29 @@ body {
 }
 
 
-#registrationForm {
+#registrationForm, #loginForm {
     /* background-color: #ccc; */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     max-width: 500px;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 30px;
-    margin: 0 auto;
+    margin: 0px auto;
+    /* margin-bottom: 50px; */
+}
+
+#registrationForm {
+    display: none;
 }
 
 .form-group {
-    position: relative;
     margin-bottom: 10px;
     
+}
+
+.block__login-btn {
+    display: flex;
+    gap: 10px;
 }
 
 label {
@@ -75,7 +84,8 @@ input:focus {
 
 
 
-button[type="submit"] {
+button[type="submit"],
+[type="button"] {
     display: block;
     background-color: rgb(38, 125, 224);
     color: #ebe2e2;
@@ -89,11 +99,13 @@ button[type="submit"] {
     margin-top: 30px;
 }
 
-button[type="submit"]:hover {
+button[type="submit"],
+[type="button"]:hover {
     color: #fff;
 }
 
-button[type="submit"]:active {
+button[type="submit"],
+[type="button"]:active {
     transform: scale(0.98);
     opacity: 0.8;
 }

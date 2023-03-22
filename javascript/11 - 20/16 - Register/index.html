@@ -1,52 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <title>16 - Register</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- <h1>16 - <mark>Register</mark></h1> -->
 
     <form id="registrationForm" name="formUser">
-        <div class="form-group item1">
-            <label for="firstName">Імя користувача</label>
-            <input class="firstName" type="text" name="firstName" id="firstName" oninput="changeColor()"/>
-        </div>
-        <div class="form-group item2">
-            <label for="lastName">Прізвище користувача</label>
-            <input class="lastName" type="text" name="lastName" id="lastName" />
-        </div>
-        <div class="form-group item3">
-            <label for="date">Дата народження</label>
-            <input class="date" type="date" name="date" id="date" />
-        </div>
-        <div class="form-group item4">
-            <label for="email">Email</label>
-            <input class="email" type="email" name="email" id="email" />
-        </div>
-        <div class="form-group item5">
-            <label for="password">Пароль</label>
-            <input class="password" type="password" name="password" id="password" />
-        </div>
-        <div class="form-group item6">
-            <label for="confirm_password">Підтвердити пароль</label>
-            <input class="confirm_password" type="password" name="confirm_password" id="confirm_password" />
-        </div>
+      <div class="form-group item1">
+        <label for="firstName">Імя користувача</label>
+        <input
+          class="firstName"
+          type="text"
+          name="firstName"
+          id="firstName"
+          oninput="changeColor()"
+        />
+      </div>
+      <div class="form-group item2">
+        <label for="lastName">Прізвище користувача</label>
+        <input class="lastName" type="text" name="lastName" id="lastName" />
+      </div>
+      <div class="form-group item3">
+        <label for="date">Дата народження</label>
+        <input class="date" type="date" name="date" id="date" />
+      </div>
+      <div class="form-group item4">
+        <label for="email">Email</label>
+        <input class="email" type="email" name="email" id="email" />
+      </div>
+      <div class="form-group item5">
+        <label for="password">Пароль</label>
+        <input class="password" type="password" name="password" id="password" />
+      </div>
+      <div class="form-group item6">
+        <label for="confirm_password">Підтвердити пароль</label>
+        <input
+          class="confirm_password"
+          type="password"
+          name="confirm_password"
+          id="confirm_password"
+        />
+      </div>
 
-        <div class="item7">
-            <button type="submit" id="submit_btn">Зареєструватися</button>
-        </div>
+      <div class="item7">
+        <button type="submit" id="submit_btn">Зареєструватися</button>
+        <button type="button" id="goToLoginBtn">Вхід</button>
+      </div>
     </form>
 
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="email" type="email" name="email" id="loginEmail" />
+      </div>
+      <div class="form-group">
+        <label for="password">Пароль</label>
+        <input
+          class="password"
+          type="password"
+          name="password"
+          id="loginPassword"
+        />
+      </div>
 
-
+      <div class="block__login-btn">
+        <button type="submit" id="logInBtn">Вхід</button>
+        <button type="button" id="registerBtn">Зареєструватися</button>
+      </div>
+    </form>
 
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
