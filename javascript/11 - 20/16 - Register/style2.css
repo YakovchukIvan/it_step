@@ -23,8 +23,7 @@ body {
     color: aliceblue;
 }
 
-
-#registrationForm {
+#loginForm {
     /* background-color: #ccc; */
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     max-width: 500px;
@@ -37,7 +36,7 @@ body {
 .form-group {
     position: relative;
     margin-bottom: 10px;
-    
+
 }
 
 label {
@@ -47,12 +46,7 @@ label {
     color: rgb(50, 129, 134);
 }
 
-input[name="firstName"],
-input[name="lastName"],
-input[name="date"],
-input[name="email"],
-input[name="password"],
-input[name="confirm_password"] {
+input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -63,24 +57,49 @@ input[name="confirm_password"] {
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
 }
 
-input[name="date"] {
-    color: rgb(50, 129, 134);
-}
-
 input:focus {
     border: 1px solid #ccc !important;
     box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
     outline: none;
 }
 
+.block__login-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-
-button[type="submit"] {
+.block__login-btn > a{
     display: block;
     background-color: rgb(38, 125, 224);
     color: #ebe2e2;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.block__login-btn>a:hover {
+    color: #fff;
+}
+
+.block__login-btn>a:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+
+button {
+    display: block;
+    background-color: rgb(38, 125, 224);
+    color: #ebe2e2;
+    font-size: 16px;
+    font-weight: 400;
     letter-spacing: 1px;
     border: none;
     border-radius: 5px;
@@ -89,51 +108,13 @@ button[type="submit"] {
     margin-top: 30px;
 }
 
-button[type="submit"]:hover {
+button:hover {
     color: #fff;
 }
 
-button[type="submit"]:active {
+button:active {
     transform: scale(0.98);
     opacity: 0.8;
-}
-
-p {
-    display: none;
-    background-color: rgba(245, 9, 9, 0.801);
-    border: 3px solid rgb(179, 85, 69);
-    border: 2px solid rgb(226, 223, 61);
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    color: rgb(253, 253, 253);
-    padding: 2px 4px;
-    animation: zoom 2s ease-in-out infinite;
-}
-
-.item7 > p {
-    background-color: rgb(94, 165, 98);
-    border: none;
-    color: rgb(23, 65, 40);
-    width: max-content;
-    animation:none;
-    opacity: 1;
-    padding: 4px 8px;
-}
-
-@keyframes zoom {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.03);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
 ul {
@@ -143,17 +124,16 @@ ul {
     list-style-type: none;
 }
 
-li > a {
+li>a {
     border-radius: 8px;
     text-decoration: none;
     font-size: 20px;
     color: rgb(38, 125, 224);
     padding: 8px 16px;
-
 }
 
-li:nth-child(1) > a {
-    font-weight: 600;
+li:nth-child(1)>a {
+    background-color: #9bc4fa;
 }
 
 li>a:active {
@@ -161,7 +141,7 @@ li>a:active {
 }
 
 li:nth-child(2)>a {
-    background-color: #9bc4fa;
+    font-weight: 600;
 }
 
 li:nth-child(3)>a {
