@@ -42,12 +42,16 @@ itemBtn.addEventListener("submit", (event) => {
     event.preventDefault()
 
     if (buttonClick) {
+        localStorage.removeItem(userOpenProfile);
         console.log("Good");  
+        console.log(userOpenProfile);
+        startUser();
     } else {
         console.log("Не вірна пошта");
     }
 
 })
+
 
 
 
