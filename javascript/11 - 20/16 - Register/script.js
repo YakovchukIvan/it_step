@@ -30,16 +30,19 @@ class User {
         console.log(this);
         
         localStorage.setItem(this.email, JSON.stringify(this));
-        alert("Успішна реєстрація")
 
+        alert("Успішна реєстрація")
+        window.location.href = './userProfile.html';
 
     }
 
 }
 
+let tester = "";
+
 
 const registrationForm = document.getElementById('registrationForm');
-const wrapper = document.querySelector(".form-group");
+// const wrapper = document.querySelector(".form-group");
 
 const item1 = document.querySelector(".item1") // створюємо item1 в JS документі і присвоюємо йому значення тега <div class="item1"></div> з HTML документа
 const item2 = document.querySelector(".item2") // це для того, щоб ми могли працювати з елементом div.item1 з самого HTML документа в документі JS
@@ -74,21 +77,34 @@ registrationForm.addEventListener('submit', (event) => {
     const password = document.getElementById('password').value
     const confirm_password = document.getElementById('confirm_password').value
 
-    const user = new User (firstName, lastName, date, email, password, confirm_password);
+    const userRegister = new User (firstName, lastName, date, email, password, confirm_password);
 
-    if (firstName.length < 1 ||  lastName.length < 1 || date.length < 1 || email.length < 1 || password.length < 6 || confirm_password.length < 6) {
+    if (firstName.length < 1 ||  lastName.length < 1 || date.length < 1 || email.length < 1 || password.length < 6) {
         console.log("Заповніть всі данні");
         validInput7.style.display = 'block';
     }  else {
-        validInput7.style.display = 'none';
-        user.register();
-        input1.value = "";
-        input2.value = "";
-        input3.value = "";
-        input4.value = "";
-        input5.value = "";
-        input6.value = "";
-        input1.removeEventListener('mouseout');
+        if (confirm_password === password) {
+            validInput7.style.display = 'none';
+            userRegister.register();
+
+            const userData = localStorage.getItem(email)
+
+            const user = JSON.parse(userData)
+            localStorage.setItem('user', JSON.stringify(user));
+            console.log(user);
+
+
+            input1.value = "";
+            input2.value = "";
+            input3.value = "";
+            input4.value = "";
+            input5.value = "";
+            input6.value = "";
+        } else {
+            validInput6.style.display = 'block';
+            input6.style.border = '1px solid red';
+        }
+
     }
 
     if (firstName.length < 1) {

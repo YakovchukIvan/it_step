@@ -1,10 +1,3 @@
-const registerBtn = document.getElementById("registerBtn")
-
-registerBtn.addEventListener("click", ShowRegister = () => {
-    loginForm.style.display = "none"
-    registrationForm.style.display = "block"
-})
-
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault()
 
@@ -15,7 +8,9 @@ loginForm.addEventListener("submit", (event) => {
     // console.log('userData: ', userData);
 
     if (userData) {
-       const user = JSON.parse(userData)
+        const user = JSON.parse(userData)
+        localStorage.setItem('user', JSON.stringify(user));
+        console.log(user);  
     //    console.log("Такої пошти не існує");
        if (user.password === logInPassword) {
         console.log("Вхід успішний");
@@ -28,8 +23,6 @@ loginForm.addEventListener("submit", (event) => {
     }
 
 })
-
-
 
 
 

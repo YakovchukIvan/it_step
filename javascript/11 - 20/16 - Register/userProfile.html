@@ -1,39 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style3.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style3.css" />
     <title>MyProfile</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <ul>
-        <li><a href="./index.html">Login</a></li>
-        <li><a href="./index.html">Registration</a></li>
-        <li><a href="#">My Profile</a></li>
+      <li><a href="./userLogin.html">Login</a></li>
+      <li><a href="./index.html">Registration</a></li>
+      <li><a href="#">My Profile</a></li>
     </ul>
 
-    <div class="wrapper">
+    <div id="wrapper" class="wrapper">
+      <div class="user__photo">
+        <img src="./userLogo.png" alt="userLogo" />
+      </div>
+      <div class="user__contact">
+        <h2 class="user__title">User Info</h2>
+        <ul class="user__list"></ul>
+      </div>
 
-        <div class="user__photo">
-            <img src="https://assets.stickpng.com/images/585e4bcdcb11b227491c3396.png" alt="">
-        </div>
-        <div class="user__contact">
-            <h2 class="user__title">User Info</h2>
-            <ul class="user__list">
-                <li class="list__item-name"></li>
-                <li class="list__item-lastName"></li>
-                <li class="list__item-date"></li>
-                <li class="list__item-email"></li>
-            </ul>
-        </div>
-
-
+      <form id="itemBtn">
+        <button type="submit" class="btnExit"></button>
+      </form>
     </div>
 
-
-    <script src="./userProfile.js"></script>
-</body>
+    <script src="./userProfile.js" type="module"></script>
+  </body>
 </html>

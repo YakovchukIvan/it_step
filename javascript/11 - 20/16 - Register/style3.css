@@ -24,6 +24,7 @@ body {
 }
 
 .wrapper {
+    position: relative;
     display: flex;
     gap: 20px;
     /* background-color: #ccc; */
@@ -57,6 +58,27 @@ ul {
     list-style-type: none;
 }
 
+.user__list {
+
+}
+
+.user__list>li {
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.user__list > li > span:nth-child(1) {
+    width: 40%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.user__list > li > span:nth-child(2) {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
 li>a {
     border-radius: 8px;
     text-decoration: none;
@@ -88,4 +110,25 @@ li:nth-child(3)>a {
 .user__title {
     text-align: center;
     margin: 0;
+}
+
+.btnExit {
+    background-image: url(https://mystat.itstep.org/assets/images/logout.png?v=e1d0e580fd5fc2a75aa7f422ebf130dd);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 25px;
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+.btnExit:hover {
+    background-color: rgb(5, 34, 34);
+}
+.btnExit:active {
+    opacity: 0.8;
 }
