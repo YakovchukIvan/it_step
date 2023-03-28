@@ -5,6 +5,7 @@ loginForm.addEventListener("submit", (event) => {
     const logInPassword = document.getElementById("loginPassword").value
 
     const userData = localStorage.getItem(logInEmail)
+    localStorage.setItem('logInEmail', JSON.stringify(logInEmail));
     // console.log('userData: ', userData);
 
     if (userData) {

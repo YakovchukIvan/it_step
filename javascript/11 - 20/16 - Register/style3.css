@@ -109,26 +109,91 @@ li:nth-child(3)>a {
 
 .user__title {
     text-align: center;
-    margin: 0 0 25px 0;
+    margin: 0;
 }
 
-.btnExit {
+.btn_exit {
     background-image: url(https://mystat.itstep.org/assets/images/logout.png?v=e1d0e580fd5fc2a75aa7f422ebf130dd);
     background-repeat: no-repeat;
     background-position: center;
     height: 25px;
     width: 20px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: relative;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     padding: 8px 16px;
 }
-.btnExit:hover {
+.btn_exit:hover {
     background-color: rgb(5, 34, 34);
 }
-.btnExit:active {
+.btn_exit:active {
     opacity: 0.8;
+}
+
+.btn_deleted {
+    background-image: url(./deleted_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center;
+    height: 25px;
+    width: 20px;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.btn_deleted:hover {
+    background-color: rgb(248, 118, 118);
+}
+
+.btn_deleted:active {
+    opacity: 0.8;
+}
+
+.block_span-hint {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn_exit:hover .span__hint1 {
+    display: block;
+}
+
+.span__hint1 {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    width: max-content;
+    bottom: -35px;
+    left: -60px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 8px;
+    color: rgb(5, 34, 34);
+    ;
+    font-weight: 600;
+    padding: 4px 8px;
+}
+
+.btn_deleted:hover .span__hint2{
+    display: block;
+}
+
+.span__hint2 {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    width: max-content;
+    bottom: -35px;
+    left: -60px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 8px;
+    color: rgb(248, 118, 118);;
+    font-weight: 600;
+    padding: 4px 8px;
 }

@@ -42,7 +42,7 @@ let tester = "";
 
 
 const registrationForm = document.getElementById('registrationForm');
-// const wrapper = document.querySelector(".form-group");
+const wrapper = document.querySelector(".form-group");
 
 const item1 = document.querySelector(".item1") // створюємо item1 в JS документі і присвоюємо йому значення тега <div class="item1"></div> з HTML документа
 const item2 = document.querySelector(".item2") // це для того, щоб ми могли працювати з елементом div.item1 з самого HTML документа в документі JS
@@ -90,6 +90,7 @@ registrationForm.addEventListener('submit', (event) => {
             const userData = localStorage.getItem(email)
 
             const user = JSON.parse(userData)
+            localStorage.setItem('email', JSON.stringify(email));
             localStorage.setItem('user', JSON.stringify(user));
             console.log(user);
 
@@ -158,7 +159,7 @@ registrationForm.addEventListener('submit', (event) => {
                 input1.style.border = '1px solid red';
             break;
         }
-        }, 200);
+        }, 50);
     })
 
     input2.addEventListener('mouseout', (event) => {
@@ -176,7 +177,7 @@ registrationForm.addEventListener('submit', (event) => {
                 input2.style.border = '1px solid red';
             break;
         }
-        }, 200);
+        }, 50);
     })
 
     input3.addEventListener('mouseout', (event) => {
@@ -194,7 +195,7 @@ registrationForm.addEventListener('submit', (event) => {
                 input3.style.border = '1px solid red';
             break;
         }
-        }, 200);
+        }, 50);
     })
 
     input4.addEventListener('mouseout', (event) => {
@@ -212,7 +213,7 @@ registrationForm.addEventListener('submit', (event) => {
                 input4.style.border = '1px solid red';
             break;
         }
-        }, 200);
+        }, 50);
     })
 
     input5.addEventListener('mouseout', (event) => {
@@ -230,7 +231,7 @@ registrationForm.addEventListener('submit', (event) => {
                 input5.style.border = '1px solid red';
             break;
         }
-        }, 200);
+        }, 50);
     })
 
     input6.addEventListener('mouseout', (event) => {
@@ -248,7 +249,7 @@ registrationForm.addEventListener('submit', (event) => {
                 input6.style.border = '1px solid red';
             break;
         }
-        }, 200);
+        }, 50);
     })
 
 }) 
