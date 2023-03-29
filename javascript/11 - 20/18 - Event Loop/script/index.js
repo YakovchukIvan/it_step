@@ -1,9 +1,5 @@
 "use strict"
 
-
-
-
-
 // eventBtn.addEventListener("click", ()=> {
 //     console.log("Привіт, я event loop і я почув про твою подію");
 // })
