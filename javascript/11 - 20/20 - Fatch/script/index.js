@@ -38,7 +38,7 @@ async function Req() {
   try {
     const response = await fetch(url)
     btn.setAttribute("disabled", true)
-    const data = await  response.json()
+    const data = await response.json()
       let counter = 0;  
       const elem = data.map(item =>{
         counter++;
