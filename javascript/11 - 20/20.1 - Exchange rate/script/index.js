@@ -1,6 +1,6 @@
 "use strict"
 
-const url = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
+const url = "https://cors-anywhere.herokuapp.com/https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
 const usd1 = document.querySelector(".usd1")
 const usd2 = document.querySelector(".usd2")
 
@@ -102,14 +102,14 @@ function buyUSD(){
   const val = document.querySelector(".n1and3").innerHTML
   const par = document.querySelector(".icvelsBUY")
   const result = Number(num) * Number(val)
-  par.innerHTML = result.toFixed(2)
+  par.innerHTML = result.toFixed(2) + " UAN"
 }
 function buyEUR(){
   const num = document.querySelector(".inputBUY").value
   const val = document.querySelector(".n2and3").innerHTML
   const par = document.querySelector(".icvelsBUY")
   const result = Number(num) * Number(val)
-  par.innerHTML = result.toFixed(2)
+  par.innerHTML = result.toFixed(2) + " UAN"
 }
 
 
@@ -118,14 +118,14 @@ function saleUSD(){
   const val = document.querySelector(".n1and4").innerHTML
   const par = document.querySelector(".icvelsSELE")
   const result = Number(num) * Number(val)
-  par.innerHTML = result.toFixed(2)
+  par.innerHTML = result.toFixed(2) + " UAN"
 }
 function saleEUR(){
   const num = document.querySelector(".inputSALE").value
   const val = document.querySelector(".n2and4").innerHTML
   const par = document.querySelector(".icvelsSELE")
   const result = Number(num) * Number(val)
-  par.innerHTML = result.toFixed(2)
+  par.innerHTML = result.toFixed(2) + " UAN"
 }
 
 
