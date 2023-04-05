@@ -7,6 +7,12 @@ const usd2 = document.querySelector(".usd2")
 const eur1 = document.querySelector(".eur1")
 const eur2 = document.querySelector(".eur2")
 
+// const input__valute = document.querySelector(".input__valute")
+// const item__eur = document.querySelector(".item__option-eur")
+// const item__usd = document.querySelector(".item__option-usd")
+// const btn__convertor = document.querySelector(".btn__convertor")
+// const out__valute = document.querySelector(".out__valute")
+// const list__Option = document.querySelector(".list__valute-option")
 
 async function privatbank(url) {
   try {
@@ -28,6 +34,25 @@ async function privatbank(url) {
     n2and2(usd.base_ccy)
     n2and3(usd.buy)
     n2and4(usd.sale)
+
+    // btn__convertor.addEventListener("click", () => {
+    // const selectedOption = list__Option.value;
+    //   if (list__Option.value === "eur") {
+
+    //     // console.log('selectedOption: ', selectedOption);// для перевірки
+    //     // console.log("Працює перший чек");// для перевірки
+    //     const result = parseInt(input__valute.value) * eur.buy;
+    //     // console.log('result: ', result); // для перевірки
+    //     out__valute.textContent = result + " €";
+    //     input__valute.value = "";
+    //   } else if (list__Option.value === "usd") {
+    //     // console.log('selectedOption: ', selectedOption);// для перевірки
+    //     // console.log("Працює другий чек");// для перевірки
+    //     const result = parseInt(input__valute.value) * usd.buy;
+    //     out__valute.textContent = result + " $";
+    //     input__valute.value = "";
+    //   } else {console.log("error")}
+    // })
 
   } catch (error) {
     
@@ -71,18 +96,38 @@ function n2and4(euro) {
   content.innerHTML = euro;
 }
 
-const input__valute = document.querySelector(".input__valute")
-const item__eur = document.querySelector(".item__option-eur")
-const item__usd = document.querySelector(".item__option-usd")
-const btn__convertor = document.querySelector(".btn__convertor")
-const out__valute = document.querySelector(".out__valute")
+
+function buyUSD(){
+  const num = document.querySelector(".inputBUY").value
+  const val = document.querySelector(".n1and3").innerHTML
+  const par = document.querySelector(".icvelsBUY")
+  const result = Number(num) * Number(val)
+  par.innerHTML = result.toFixed(2)
+}
+function buyEUR(){
+  const num = document.querySelector(".inputBUY").value
+  const val = document.querySelector(".n2and3").innerHTML
+  const par = document.querySelector(".icvelsBUY")
+  const result = Number(num) * Number(val)
+  par.innerHTML = result.toFixed(2)
+}
 
 
-btn__convertor.addEventListener("click", () => {
-  if (item__eur === true) {
-    console.log("item__eur");
-  } else {console.log("item__usd")}
-})
+function saleUSD(){
+  const num = document.querySelector(".inputSALE").value
+  const val = document.querySelector(".n1and4").innerHTML
+  const par = document.querySelector(".icvelsSELE")
+  const result = Number(num) * Number(val)
+  par.innerHTML = result.toFixed(2)
+}
+function saleEUR(){
+  const num = document.querySelector(".inputSALE").value
+  const val = document.querySelector(".n2and4").innerHTML
+  const par = document.querySelector(".icvelsSELE")
+  const result = Number(num) * Number(val)
+  par.innerHTML = result.toFixed(2)
+}
+
 
 
 

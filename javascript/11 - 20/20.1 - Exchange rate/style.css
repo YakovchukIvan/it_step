@@ -72,9 +72,10 @@ th {
 
 .block__convertor {
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 40px;
 }
 
 .input__valute {
@@ -100,4 +101,9 @@ th {
     color: black;
     text-align: center;
     padding: 2px 6px;
+}
+
+.wrapper__btn {
+    display: flex;
+    flex-direction: row;
 }

@@ -56,7 +56,7 @@
         </table>
       </div>
 
-      <div>
+      <!-- <div>
         <p>Конвертувати валюту</p>
         <div class="block__convertor">
           <input
@@ -66,12 +66,39 @@
           />
 
           <select class="list__valute-option">
-            <option class="item__option-eur">EUR</option>
-            <option class="item__option-usd">USD</option>
+            <option value="eur" class="item__option-eur">EUR</option>
+            <option value="usd" class="item__option-usd">USD</option>
           </select>
           <button type="submit" class="btn__convertor">Обмін</button>
 
           <p class="out__valute"></p>
+        </div>
+      </div> -->
+
+      <h2 class="calculator">Конвертор валют</h2>
+      <div class="block__convertor">
+        <div class="calBUY">
+          <h3>Продати</h3>
+          <div>
+            <input id="" class="inputBUY" type="number" />
+          </div>
+          <div class="wrapper__btn">
+            <button onclick="buyUSD()" class="baySale">USD</button>
+            <button onclick="buyEUR()" class="baySale">EUR</button>
+          </div>
+          <p class="icvelsBUY">0 UAN</p>
+        </div>
+
+        <div class="calSALE">
+          <h3>Купити</h3>
+          <div>
+            <input id="" class="inputSALE" type="number" />
+          </div>
+          <div class="wrapper__btn">
+            <button onclick="saleUSD()" class="baySale">USD</button>
+            <button onclick="saleEUR()" class="baySale">EUR</button>
+          </div>
+          <p class="icvelsSELE">0 UAN</p>
         </div>
       </div>
     </div>
