@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #F2F7FA;
+    margin: 0;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    /* font-size: 1.2rem; */
+    /* min-height: 100vh; */
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    color: rgb(28, 80, 126);
+}
+
+img {
+    width: 65px;
+    height: 65px;
+}
+
+.wrapper {
+    max-width: 100%;
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    /* border: 1px solid red; */
+}
+
+.search__block {
+    min-width: 100%;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    /* border: 1px solid red; */
+}
+
+.block__title {
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 65%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin: 0;
+    padding: 20px;
+    /* border: 1px solid rgb(166, 255, 0); */
+}
+
+.title__city {
+    text-align: center;
+    align-self: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(44, 44, 44);
+}
+
+.timeSpan {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: 500;
+    font-size: clamp(0.875rem, 0.77rem + 0.53vw, 1.125rem) !important;
+}
+
+.title__city > span:nth-child(1) {
+    color: rgb(44, 44, 44);
+    font-size: clamp(1.25rem, 0.724rem + 2.63vw, 2.5rem);
+    font-weight: 400;
+}
+
+.title__city>span:nth-child(2) {
+    position: absolute;
+    right: 30px;
+    top: 55px;
+    width: max-content;
+    /* border: 1px solid rgb(0, 255, 13); */
+    color: rgb(100, 96, 96);
+    font-size: clamp(0.875rem, 0.822rem + 0.26vw, 1rem);
+    font-weight: 400;
+}
+
+.title__city > img {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    /* border: 1px solid red;   */
+}
+
+#formCity {
+    background-color: rgb(197, 220, 224);
+    position: relative;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 10px 20px;
+    /* border: 1px solid rgb(0, 238, 255); */
+}
+
+.inputValid {
+    display: none;
+    position: absolute;
+    width: max-content;
+    bottom: 15px;
+    left: 27px;
+    font-size: 16px;
+    color: #eaf0f1;
+    background-color: rgba(219, 58, 58, 0.884);
+    border: 1px solid rgb(255, 102, 0);
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+#formCity > label {
+    font-size: 16px;
+}
+
+.inputCity {
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+
+.btnSearch {
+    width: max-content;
+    align-self: center;
+    background-color: rgb(38, 125, 224);
+    color: #ebe2e2;
+    font-size: clamp(1rem, 0.947rem + 0.26vw, 1.125rem);
+    font-weight: 400;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.btnSearch:hover {
+    color: #fff;
+}
+
+.btnSearch:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+}
+
+
+.block__card-day {
+    /* border: 1px solid red; */
+    background-color: #fff;
+    width: max-content;
+    display: none; /* коли відкриваємо сторінку, щоб не було видно цього блоку */
+    gap: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 25px;
+}
+
+.block__card-day > div {
+    width: 125px;
+    /* height: 175px; */
+    border-radius: 8px;
+    border: 1px solid #DDDDDD;
+    text-align: center;
+    cursor: pointer;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 1px 2px 5px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}
+
+.day__one {
+    
+}
+
+.week__day {
+
+}
+
+.number__day {}
+
+.month {}
+
+.icon__weather {}
+
+.block__temp {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 16px 0px;
+}
+
+.block__temp > div > span {
+    display: block;
+}
+
+.block__temp-min {
+    /* border: 1px solid rgb(59, 25, 25); */
+}
+
+.block__temp-max {
+    /* border: 1px solid rgb(3, 0, 0); */
+}
+
+.weather__block {
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 10px 20px;
+}
+
+.table_list {
+    display: none;
+    background-color: #ffffff;
+    /* width: 100%; */
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 0.3) 1px 2px 5px 2px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+    border: 1px solid rgb(180, 178, 178);
+}
+
+.table__title > td {
+    text-align: center;
+}
+
+th {
+    padding: 5px 10px;
+}
+
+td {
+    /* width: 80px; */
+    text-align: center;
+    font-size: 15px;
+    background-color: #fdfdfd;
+    padding: 5px 10px;
+    /* border-bottom: 1px solid red; */
+    /* border: 1px solid black; */
+}
+
+.tr__icon > td:hover {
+    background-color: rgba(189, 203, 219, 0.678);
+}
+
+.tr__title > td {
+    background-color: #F2F2F2;
+}
+
+.temp>td {
+    background-color: #F2F2F2;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.feels__like>td {
+    font-size: 14px;
+    color: #9d9d9d;
+    font-weight: bold;
+}
+
+.humidity>td {
+    background-color: #F2F2F2;
+    font-weight: 500;
+}
+
+.pressure>td {
+    background-color: #F2F2F2;
+    font-weight: 500;
+}
+
+td:nth-child(odd) {
+    border-right: 1px solid rgb(136, 136, 136);
+}
+
+.table__title>td:nth-child(even) {
+    border-right: 1px solid rgb(136, 136, 136);
+}
+
+td:last-child {
+    border: none;
+}
+
+.td_today {
+    background-color: #E0EEF9 !important;
+}
+
+.title_today {
+    background-color: #78ADD3 !important;
+}
+
+.td_today_first,
+.humidity_today,
+.pressure_today {
+    background-color: #CFE2F0 !important;
+}
+
+@media screen and (max-width: 920px) {
+    body {
+        padding: 5px;
+    }
+    .wrapper {
+        padding: 0px;
+    }
+
+    .search__block {
+        max-width: 100%;
+        width: 800px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .block__title {
+        width: 100%;
+        height: max-content;
+        margin: 0px 10px;
+    }
+
+    .title__city {
+        margin: 0;
+        padding: 0;
+    }
+    .title__city>span:nth-child(1) {
+        font-size: 24px !important;
+        font-weight: 500;
+    }
+    .timeSpan {
+        top: 10px;
+        left: 10px;
+    }
+
+    .title__city>span:nth-child(2) {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+        /* width: 50px; */
+        /* border: 1px solid rgb(0, 255, 13); */
+        color: rgb(100, 96, 96);
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .title__city>img {
+        position: absolute;
+        right: 0px;
+        top: -10px;
+        /* border: 1px solid red; */
+    }
+
+    #formCity {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 40px;
+        margin-bottom: 0;
+    }
+
+    .block__card-day {
+        width: 100%;
+        overflow: scroll;
+    }
+    .block__card-day>div{
+        padding: 5px 10px;
+    }
+    .block__card-day > div > p, .block__temp{
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+    .number__day {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .block__temp > div > span:nth-child(1) {
+        color: grey;
+    }
+    .block__temp>div>span:nth-child(2) {
+        font-size: 15px;
+    }
+
+    .table_list {
+        width: 100%;
+        overflow: scroll;
+        font-size: 14px;
+        table-layout: fixed;
+        position: relative;
+        padding: 0px;
+    }
+    th {
+        background-color: #fff;
+        position: sticky;
+        left: 0px;
+        z-index: 20;
+        font-size: 12px;
+        padding: 5px 0px;
+        padding-left: 5px;
+    }
+    .tr__icon>td>img {
+        width: 55px;
+        height: 55px;
+    }
+    td {
+        font-size: 15px !important;
+        padding: 5px 0px;
+    }
+    .inputValid {
+        bottom: 48px;
+        font-size: 14px;
+    }
+}

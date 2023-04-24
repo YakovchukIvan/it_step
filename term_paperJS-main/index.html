@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Term paper in JavaScript</title>
+  </head>
+
+  <body>
+    <!-- <h1>Погода з допомогою <mark>Java Script</mark></h1> -->
+    <div class="wrapper">
+
+      <div class="search__block">
+        <form action="" id="formCity">
+          <label for="inputCity">Виберіть місто для погоди</label>
+          <input id="inputCity" class="inputCity" type="text" autocomplete="off"/>
+          <span class="inputValid">Невірно введено місто</span>
+          <button class="btnSearch" type="submit">Пошук</button>
+        </form>
+        <div class="block__title">
+          <span class="timeSpan"></span>
+          <p class="title__city"></p>
+        </div>
+      </div>
+
+      <div class="block__card-day">
+        <!-- <div class="day__one">
+          <p class="week__day">Неділя</p>
+          <p class="number__day">16</p>
+          <p class="month">квітня</p>
+          <img class="icon__weather" src="" alt="icon">
+          <div class="block__temp">
+            <div class="block__temp-min">
+              <span>мін</span>
+              <span>+6°</span>
+            </div>
+            <div class="block__temp-max">
+              <span>макс</span>
+              <span>+14°</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="day__two">
+          <p class="week__day">Неділя</p>
+          <p class="number__day">16</p>
+          <p class="month">квітня</p>
+          <img class="icon__weather" src="" alt="icon">
+          <div class="block__temp">
+            <div class="block__temp-min">
+              <span>мін</span>
+              <span>+6°</span>
+            </div>
+            <div class="block__temp-max">
+              <span>макс</span>
+              <span>+14°</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day__three">
+          <p class="week__day">Неділя</p>
+          <p class="number__day">16</p>
+          <p class="month">квітня</p>
+          <img class="icon__weather" src="" alt="icon">
+          <div class="block__temp">
+            <div class="block__temp-min">
+              <span>мін</span>
+              <span>+6°</span>
+            </div>
+            <div class="block__temp-max">
+              <span>макс</span>
+              <span>+14°</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day__four">
+          <p class="week__day">Неділя</p>
+          <p class="number__day">16</p>
+          <p class="month">квітня</p>
+          <img class="icon__weather" src="" alt="icon">
+          <div class="block__temp">
+            <div class="block__temp-min">
+              <span>мін</span>
+              <span>+6°</span>
+            </div>
+            <div class="block__temp-max">
+              <span>макс</span>
+              <span>+14°</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="day__five">
+          <p class="week__day">Неділя</p>
+          <p class="number__day">16</p>
+          <p class="month">квітня</p>
+          <img class="icon__weather" src="" alt="icon">
+          <div class="block__temp">
+            <div class="block__temp-min">
+              <span>мін</span>
+              <span>+6°</span>
+            </div>
+            <div class="block__temp-max">
+              <span>макс</span>
+              <span>+14°</span>
+            </div>
+        </div>
+        </div> -->
+      </div>
+
+      <table class="table_list">
+        <!-- <thead class="header__table">
+          <tr class="table__title">
+            <th></th>
+            <td class="" >ніч</td>
+            <td class="" >ранок</td>
+            <td class="" >день</td>
+            <td class="noB">вечір</td>
+          </tr>
+        </thead> -->
+
+        <tbody class="body__table">
+          <tr class="tr__title">
+            <th></th>
+            <!-- <td>00:00</td>
+                    <td>03:00</td>
+                    <td>06:00</td>
+                    <td>09:00</td>
+                    <td>12:00</td>
+                    <td>15:00</td>
+                    <td>18:00</td>
+                    <td>21:00</td> -->
+          </tr>
+
+          <tr class="tr__icon">
+            <th></th>
+            <!-- <td>00:00</td>
+                    <td>03:00</td>
+                    <td>06:00</td>
+                    <td>09:00</td>
+                    <td>12:00</td>
+                    <td>15:00</td>
+                    <td>18:00</td>
+                    <td>21:00</td> -->
+          </tr>
+
+          <tr class="temp">
+            <th>Температура</th>
+            <!-- <td>12</td>
+                        <td>44</td>
+                        <td>43</td>
+                        <td>12</td>
+                        <td>76</td> -->
+          </tr>
+
+          <tr class="feels__like">
+            <th>Відчувається</th>
+            <!-- <td>23</td>
+                              <td>123</td>
+                              <td>43</td>
+                              <td>12</td>
+                              <td>23</td> -->
+          </tr>
+
+          <tr class="temp__min">
+            <th>МІН</th>
+            <!-- <td>12</td>
+                    <td>44</td>
+                    <td>43</td>
+                    <td>12</td>
+                    <td>76</td> -->
+          </tr>
+
+          <tr class="temp__max">
+            <th>МАКС</th>
+            <!-- <td>23</td>
+                    <td>123</td>
+                    <td>43</td>
+                    <td>12</td>
+                    <td>23</td> -->
+          </tr>
+
+          <tr class="humidity">
+            <th>Вологість</th>
+            <!-- <td>23</td>
+                    <td>123</td>
+                    <td>43</td>
+                    <td>12</td>
+                    <td>23</td> -->
+          </tr>
+
+          <tr class="gust__wind">
+            <th>Порив вітру</th>
+            <!-- <td>23</td>
+                    <td>123</td>
+                    <td>43</td>
+                    <td>12</td>
+                    <td>23</td> -->
+          </tr>
+
+          <tr class="speed__wind">
+            <th>Вітер, м/сек</th>
+            <!-- <td>23</td>
+                    <td>123</td>
+                    <td>43</td>
+                    <td>12</td>
+                    <td>23</td> -->
+          </tr>
+
+          <tr class="pressure">
+            <th>Тиск, Па</th>
+            <!-- <td>23</td>
+                    <td>123</td>
+                    <td>43</td>
+                    <td>12</td>
+                    <td>23</td> -->
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+    <script src="./script/script.js" type="module"></script>
+  </body>
+</html>
