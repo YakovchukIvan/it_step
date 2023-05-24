@@ -112,54 +112,54 @@
 // 1 Задача: 
 // Напишіть функцію,яка приймає два числа і повертає їх суму.
 
-function add(a: number, b: number): number {
-    return a + b
-}
+// function add(a: number, b: number): number {
+//     return a + b
+// }
 
-const result: number = add(1, 5) // виклик функції
-console.log('result: ', result);
-
-
-// 2. Задача: 
-// Напишіть функцію, яка перевіряє, чи є задане число парним.
-
-function task2(a: number): boolean {
-   return a % 2 === 0;
-}
-
-const resultTask2: boolean = task2(5) // виклик функції
-console.log('result Task2: ', resultTask2);
-
-// 3. Задача: 
-// Напишіть функцію, яка приймає рядок і повертає його довжину.
+// const result: number = add(1, 5) // виклик функції
+// console.log('result: ', result);
 
 
-function task3(a:string): number {
-    return a.length
-}
+// // 2. Задача: 
+// // Напишіть функцію, яка перевіряє, чи є задане число парним.
 
-const resultTask3: number = task3("Привіт") // виклик функції
-console.log('result Task3: ', resultTask3);
+// function task2(a: number): boolean {
+//    return a % 2 === 0;
+// }
 
+// const resultTask2: boolean = task2(5) // виклик функції
+// console.log('result Task2: ', resultTask2);
 
-// 4. Задача: 
-// Напишіть функцію, яка перетворює рядок на масив окремих символів.
-
-function task4(a:string): string[] {
-    return a.split('')
-}
-
-const resultTask4: string[] = task4("Hello") // виклик функції
-console.log('result Task4: ', resultTask4);
+// // 3. Задача: 
+// // Напишіть функцію, яка приймає рядок і повертає його довжину.
 
 
-// 5. Задача: 
-// Напишіть функцію, яка об'єднує два масиви в один.
+// function task3(a:string): number {
+//     return a.length
+// }
 
-function task5(a:any[], b:any[]): any[] {
-    // return a.concat(b)
-    return [...a, ...b]
-}
+// const resultTask3: number = task3("Привіт") // виклик функції
+// console.log('result Task3: ', resultTask3);
 
-const resultTask5: any[] = task5(['2', '3'], ['b', 'v']) // виклик функції
-console.log('result Task5: ', resultTask5);
+
+// // 4. Задача: 
+// // Напишіть функцію, яка перетворює рядок на масив окремих символів.
+
+// function task4(a:string): string[] {
+//     return a.split('')
+// }
+
+// const resultTask4: string[] = task4("Hello") // виклик функції
+// console.log('result Task4: ', resultTask4);
+
+
+// // 5. Задача: 
+// // Напишіть функцію, яка об'єднує два масиви в один.
+
+// function task5(a:any[], b:any[]): any[] {
+//     // return a.concat(b)
+//     return [...a, ...b]
+// }
+
+// const resultTask5: any[] = task5(['[Це', 'перший]'], ['[Це', 'другий]']) // виклик функції
+// console.log('result Task5: ', resultTask5);
