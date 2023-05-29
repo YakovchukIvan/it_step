@@ -256,12 +256,13 @@ console.log('test: ', test);
 
 
 
-function task8(a :string): [string, string]  {
-    let [firstName, lastName] = a.split(' ')
+// function task8(a :string): [string, string]  {
+//     let [firstName, lastName] = a.split(' ') 
+//     return 
     
-}
+// }
 
-task8("Іван Яковчук")
+// task8("Іван Яковчук")
 
 // const skills: [number, string] = [1, 'Dev'] 
 

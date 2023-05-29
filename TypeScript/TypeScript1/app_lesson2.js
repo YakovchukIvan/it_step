@@ -172,15 +172,11 @@ console.log('test: ', test);
 // Напишіть функцію, яка приймає рядок, 
 // який містить ім'я та прізвище, розділені пробілом, 
 // і повертає Tuple, який містить окремо ім'я і прізвище.
-function task8(a) {
-    console.log(a);
-    for (let i = 0; i < a.length; i++) {
-        console.log(a.split(a));
-        console.log(i);
-    }
-    const user = ['1', 'Dev'];
-}
-task8("Іван Яковчук");
+// function task8(a :string): [string, string]  {
+//     let [firstName, lastName] = a.split(' ') 
+//     return 
+// }
+// task8("Іван Яковчук")
 // const skills: [number, string] = [1, 'Dev'] 
 // // const id = skills[0]
 // // const skillsName = skills[1]
