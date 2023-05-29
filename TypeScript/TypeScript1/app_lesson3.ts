@@ -160,13 +160,14 @@ function fetchAuth(url: coolString, method: httpMethod): void {
 //     skills: ['1', '2']
 // }
 
+
 // з type
 
-type User = {
-    name: string,
-    age: number,
-    skills: string[]
-}
+// type User = {
+//     name: string,
+//     age: number,
+//     skills: string[]
+// }
 
 // const user: User = {
 //     name: 'Den',
@@ -176,18 +177,199 @@ type User = {
 
 // обєднання type
 
-type Role = {
-    id: number,
+// type Role = {
+//     id: number,
+// }
+
+// type UserWithRole = User & Role 
+
+// const user: UserWithRole = {
+//     name: 'Den',
+//     age: 40,
+//     skills: ['1', '2'],
+//     id: 1
+// }
+
+
+
+
+// interface 
+
+// interface User {
+//     name: string,
+//     age: number,
+//     skills: string[]
+// }
+
+// const user: User = {
+//     name: 'Ben',
+//     age: 33,
+//     skills: ['DEV', 'QA']
+// }
+
+
+// 1 варіант
+// interface UserWithRole extends User {
+//     roleId: number;
+// }
+
+
+// 2 варіант
+// interface Role {
+//     roleId: number
+// }
+
+// interface UserWithRole extends User, Role {
+//     createAt: Date
+// }
+
+// const user: UserWithRole = {
+//     name: 'Ben',
+//     age: 33,
+//     skills: ['DEV', 'QA'],
+//     roleId: 22,
+//     createAt: new Date
+// }
+
+// console.log('user: ', user);
+
+
+
+// можемо описувати методи
+
+// interface User {
+//     name: string,
+//     age: number,
+//     skills: string[],
+//     log: (id: number) => string
+// }
+
+
+
+// різниця між інтерфейс і тайпами | interface and type
+
+// interface User {
+//     name: string
+// }
+
+// interface User {
+//     age: number
+// }
+
+// const person: User = {
+//     name: 'Jec',
+//     age: 44
+// }
+
+// type ID = string | number 
+
+// interface ID2 {
+//     ID: string | number
+// }
+
+
+// опціональність in TS
+
+// interface User {
+//     login: string,
+//     password?: string
+// }
+
+// const user : User = {
+//     login: 'bob@g.com',
+//     password: '1234qwer'
+// }
+
+
+
+
+// in function
+
+// function multiply(a:number, b:number | undefined): number {
+//     if (!b) {
+//         return a * a
+//     }
+//     return a * b
+// }
+
+// fun + obj
+
+// interface UserPro {
+//     login: string,
+//     password?: {
+//         type: 'primary' | 'secondary'
+//     }
+// }
+
+// function testPass(user: UserPro) {
+//     const t = user.password?.type
+//     const tt = user.password!.type
+// }
+
+
+
+
+// Задача 1: Перетворення значення на рядок або число
+
+// Створіть функцію convertToStringOrNumber, 
+// яка приймає аргумент типу
+// string | number і повертає рядок, 
+// якщо аргумент є типом string, або числове значення, 
+// якщо аргумент є типом number.
+
+// function fetchAuth(url:string, method:'post' | 'get' | 'delete') {
+//     fetch(method)
+// } 
+
+function convertToStringOrNumber(a:string | number) {
+    if(typeof a === 'string') {
+        console.log(a);
+        console.log(typeof a);        
+    } else if (typeof a === 'number') {
+        console.log(a);
+        console.log(typeof a);      
+    }
 }
 
-type UserWithRole = User & Role{
-    
+convertToStringOrNumber('String')
+convertToStringOrNumber(22)
+
+
+
+// Задача 2: Визначення розміру елемента
+
+// Створіть функцію getElementSize, яка приймає аргумент типу 
+// HTMLElement | SVGElement і повертає об'єкт, 
+// який містить ширину та висоту елемента.
+
+interface WidthAndHeigth {
+    w: number,
+    h: number
 }
 
+function getElementSize(w:number, h:number):WidthAndHeigth {
+    return {w,h}
+}
+
+console.log(getElementSize(20,40));
 
 
+// Задача 3: Визначення дня тижня
+
+// Створіть функцію isWeekend, яка приймає аргумент типу
+// "Saturday" або "Sunday" і повертає true, 
+// якщо день є вихідним, або false, якщо це робочий день.
 
 
+function isWeekend(a:string):void {
+    if (a === 'Saturday') {
+        console.log(true);
+    } else if (a === 'Sunday') {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
 
+}
 
-
+isWeekend('Saturday')
