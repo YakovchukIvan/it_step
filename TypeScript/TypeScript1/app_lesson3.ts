@@ -309,6 +309,7 @@ function fetchAuth(url: coolString, method: httpMethod): void {
 
 
 
+
 // Задача 1: Перетворення значення на рядок або число
 
 // Створіть функцію convertToStringOrNumber, 
@@ -369,7 +370,6 @@ function isWeekend(a:string):void {
     } else {
         console.log(false);
     }
-
 }
 
 isWeekend('Saturday')
