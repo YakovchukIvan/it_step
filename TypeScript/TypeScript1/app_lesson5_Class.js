@@ -67,7 +67,7 @@
 // console.log('payment: ', payment);
 // console.log('time: ', time);
 // console.log('payment2: ', payment2);
-// 4 перезагрузка
+// 4 перезагрузка методів
 // class User {
 //     skills: string[]
 //     addSkill(skill: string): void
