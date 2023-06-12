@@ -172,7 +172,20 @@ console.log(getLength([1, 2, 3, 4, '5']));
 // у якого значення цього поля відповідає заданому значенню. 
 // Використайте дженерік для того, щоб функція могла 
 // працювати з будь-яким типом об'єктів.
-function findByKey(task2, id) {
-    return task2[id];
-}
-console.log([{ name: 'Jon', id: 1 }, { name: 'Rok', id: 2 }]);
+// function findByKey<T>(task2: T[], id: number):number {
+//     return task2[0].id
+// }
+// console.log([{name: 'Jon', id: 1}, {name: 'Rok', id: 2}]);
+// function findByKey<T, K extends keyof T>(arr: T[], key: K, value: T[K]): T | undefined {
+//   return arr.find(obj => obj[key] === value);
+// }
+// // Приклад використання
+// const data = [
+//   { id: 1, name: 'John' },
+//   { id: 2, name: 'Jane' },
+//   { id: 3, name: 'Bob' }
+// ];
+// const result = findByKey(data, 'id', 2);
+// console.log(result); // { id: 2, name: 'Jane' }
+// const result2 = findByKey(data, 'name', 'Bob');
+// console.log(result2); // { id: 3, name: 'Bob' }
